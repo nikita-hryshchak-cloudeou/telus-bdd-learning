@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "bdd:init": "bdd-init",
+    "bdd:start": "env-cmd -f ./env/dev.env bdd",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@cloudeou/telus-bdd": "^1.5.20",
+    "axios": "^0.27.2",
+    "env-cmd": "^10.1.0"
+  }
+}

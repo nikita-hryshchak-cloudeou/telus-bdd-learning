@@ -10,18 +10,18 @@ export const approveAnimeSteps = ({ given, when, then, and }: { [key: string]: a
   const titleContext = (): TitleContext => featureContext().getContextById(Identificators.TitleContext);
   const imdbApiClient = new ImdbApiClient();
 
-  given(/^users title id is (.*)$/, (paramName: string, paramValue: number) => {
-    console.log(`Setting ${paramName} to ${paramValue}`);
+  given(/^users title id is (.*)$/, (paramValue: number) => {
+    console.log(`Setting title id to ${paramValue}`);
     titleContext().userTitleId = paramValue;
   });
 
-  and(/^users title name is (.*)$/, (paramName: string, paramValue: string) => {
-    console.log(`Setting ${paramName} to ${paramValue}`);
+  and(/^users title name is (.*)$/, (paramValue: string) => {
+    console.log(`Setting title name to ${paramValue}`);
     titleContext().name = paramValue;
   });
 
-  and(/^users title rating is (.*)$/, (paramName: string, paramValue: number) => {
-    console.log(`Setting ${paramName} to ${paramValue}`);
+  and(/^users title rating is (.*)$/, (paramValue: number) => {
+    console.log(`Setting title rating to ${paramValue}`);
     titleContext().userRating = paramValue;
   });
 

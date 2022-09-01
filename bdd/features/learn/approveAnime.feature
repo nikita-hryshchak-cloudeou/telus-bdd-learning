@@ -2,6 +2,7 @@
 @-
 @approveAnime
 @DBbootstrap=getTitle
+@runTimes=6
 
 Feature: Check users taste on anime
 

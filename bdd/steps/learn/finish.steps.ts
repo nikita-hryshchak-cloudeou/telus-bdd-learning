@@ -15,4 +15,8 @@ export const finishAutomation = ({ when }: {[key: string]: any}) => {
       errorContext().error = <string>error;
     }
   });
+
+  when("reset titles", () => {
+    console.log("titles have been reseted");
+  });
 };

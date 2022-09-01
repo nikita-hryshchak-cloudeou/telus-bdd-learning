@@ -12,5 +12,9 @@ module.exports = {
       limit 1
       )
     returning *
+    `,
+  resetTitles: () =>
+    `
+    update titles set processing=false, processed=false, approved=null returning *
     `
 };

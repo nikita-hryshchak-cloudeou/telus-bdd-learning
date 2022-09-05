@@ -51,7 +51,7 @@ export const approveAnimeSteps = ({ given, when, then, and }: { [key: string]: a
     try {
       const dif = Math.abs(titleContext().imdbRating - titleContext().userRating);
       const id = titleContext().userTitleId;
-      const query = dif < 3 ? setApproved(id, true) : setApproved(id, false);
+      const query = setApproved(id, dif < 3);
       await postgresQueryExecutor(query);
     } catch (error) {
       errorContext().error = <string>error;
